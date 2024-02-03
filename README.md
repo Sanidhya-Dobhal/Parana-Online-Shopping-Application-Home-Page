@@ -6,3 +6,6 @@
 <p>c) Product Listings: A dynamic product listing section where products are loaded asynchronously using jQuery's AJAX from a JSON file. Each product card should include an image, name, price, and an "Add to Cart" button.</p>
 <p>d) Shopping Cart: A side panel that displays the items in the user's shopping cart when clicked. The cart should show the product names, quantities, and total amount.</p>
 <p>e) Footer: Social media links. Contact information. Copyright information.</p>
+
+<h2>Features</h2>
+<p>1)This project makes use of bootstrap, jQuery and AJAX in javaScript</p>
