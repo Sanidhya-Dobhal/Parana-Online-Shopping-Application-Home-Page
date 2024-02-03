@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parana</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel ="stylesheet" href ="shopping.css">
+  </head>
+  <body>
+    <header id ="header">
+      <div id ="real_header">
+      <a href="#">Home</a>
+      <a href="#">Products</a>
+      <div style="display: flex; height: 40px">
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+          style="width: 20vw;"
+        />
+        <button
+          class="btn btn-outline-success btn-light"
+          type="submit"
+        >
+          Search
+        </button>
+      </div>
+      <a href="#">Categories</a>
+      <a id = "cartAnchor">Cart</a>
+    </div>
+    </header>
+    <main id ="main">
+      <div style ="height:60px;">
+      </div>
+      <div id="Featured_product_div">
+        <p class ="Heading_in_page">Featured Products</p>
+        <div id= "The_features">
+        <div class = "Featured-item">
+            <img src = "Headphones.png" alt = "Image error" class = "featured_image" style = "height:163px; width:250px;">
+            <p class ="Feat_name">Headphones</p>
+            <p class ="Feat_price">₹ 10000</p>
+            <a href = "#all_items_list"><button class ="btn btn-primary Feat_but">Go to item</button></a>
+          </div>
+          <div class = "Featured-item">
+            <img src = "Screenshot 2024-01-27 at 12.57.55 AM.png" alt = "Image error" class = "featured_image">
+            <p class ="Feat_name">Indoor Plant</p>
+            <p class ="Feat_price">₹ 800</p>
+            <a href = "#all_items_list"><button class ="btn btn-primary Feat_but">Go to item</button></a>
+          </div>
+        <div class = "Featured-item">
+          <img src = "insung-yoon-w2JtIQQXoRU-unsplash.jpg" alt = "Image error" class = "featured_image">
+          <p class ="Feat_name">Clock</p>
+          <p class ="Feat_price">₹ 2000</p>
+          <a href = "#all_items_list"><button class ="btn btn-primary Feat_but">Go to item</button></a>
+        </div>
+      </div>
+      </div>
+
+      <div id = "categories_and_prod_list">
+        <p class  ="categories_prod_list">Categories</p>
+        <div id="all_categories_cont">
+          <div>
+            <img src = "tech_category_img.png" alt ="Not found" class ="cat_img" id = "tech_img">
+            <p>Electronics</p>
+          </div>
+          <div>
+            <img src = "Sports_items_category.png" alt ="Not found" class ="cat_img">
+            <p>Sports</p>
+          </div>
+          <div>
+            <img src = "Fashion_category.png" alt ="Not found" class ="cat_img">
+            <p>Fashion</p>
+          </div>
+          <div>
+            <img src = "Kitchen_category.png" alt ="Not found" class ="cat_img">
+            <p>Kitchen</p>
+          </div>
+          <div>
+            <img src = "Decorations_category.png" alt ="Not found" class ="cat_img">
+            <p>Decoration</p>
+          </div>
+        </div>
+        <div id ="all_items_list">
+        <p class  ="categories_prod_list">Products List</p>
+        <div style = "overflow-x:scroll;">
+      <div id="pro_list">
+      </div>
+    </div>
+      </div>
+    </main>
+    <aside id="cart" class ="cart_inv">
+      <div style ="width:12vw; display:flex; justify-content:space-between;">
+        <p style ="font-size:25px; margin-left:3vw;">Cart</p>
+        <button class ="btn btn-success btn-sm" style = "height:40px;" id = "buy_button">Buy</button>
+      </div>
+      <div id = "total_ele">
+        <p>Total</p>
+        <p>:</p>
+        <p id ="Total_in_numbers"></p>
+      </div>
+      <div id="The_real_list">
+
+      </div>
+    </div>
+    </aside>
+    <footer>
+      <a href="#main"><div id ="back_to_top_div">Back to top</div></a>
+      <div id ="footer_info">
+      <p>&copy Sanidhya Dobhal</p>
+      <div> 
+        <p>Contact:</p>
+      <ul style="padding-left:0px;">
+      <li>Email: sanidhyadobhal2002@gmail.com</li>
+      <li>Phone number: 9234567891</li>  
+    </ul>
+    </div>
+    </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src = "shopping.js">
+    </script>
+  </body>
+</html>

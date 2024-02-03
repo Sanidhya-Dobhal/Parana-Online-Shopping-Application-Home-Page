@@ -1,0 +1,44 @@
+{
+    "Product1":{
+    "name":"Headphones",
+    "price":10000,
+    "category":"Electronics",
+    "img":"Headphones.png"
+    },
+    "Product2":{
+        "name":"Watch",
+        "price":1000,
+        "category":"Electronics",
+        "img":"watch.png"
+        },
+    "Product3":{
+        "name":"Indoor plant",
+        "price":800,
+        "category":"Decoration",
+        "img":"Screenshot 2024-01-27 at 12.57.55 AM.png"
+        },
+    "Product4":{
+    "name":"T-Shirt",
+    "price":369,
+    "category":"Fashion",
+    "img":"T-shirt.png"
+    },
+    "Product5":{
+    "name":"Clock",
+    "price":2000,
+    "category":"Electronics",
+    "img":"insung-yoon-w2JtIQQXoRU-unsplash.jpg"
+    },
+    "Product6":{
+        "name":"Football",
+        "price":549,
+        "category":"Sports",
+        "img":"football.png"
+    },
+    "Product7":{
+        "name":"Dinner-Set",
+        "price":1500,
+        "category":"Kitchen",
+        "img":"Dinner-set.png"
+        }
+}
