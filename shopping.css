@@ -270,7 +270,9 @@ main{
     width:1040px;
   }
 }
-@media screen and (max-width:1060px)
+@media screen and (max-width:1160px)
 {
-  
+  #all_categories_cont{
+    grid-template-columns: auto auto;
+  }
 }

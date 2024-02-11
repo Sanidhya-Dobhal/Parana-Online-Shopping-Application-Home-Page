@@ -1,6 +1,7 @@
 let xhr = new XMLHttpRequest();
 let cart = [];
 total = 0;
+flag = 0;//Flag is used for responsiveness, it will be set to 1 when width<1160 and used when the width is between 1160 and 12
 $("#cart").css("height",`${window.innerHeight-60}px`);
 window.addEventListener("resize",height_setter);
 function height_setter()
@@ -256,8 +257,30 @@ $(document).ready(function(){
         $(".Featured-item")[i].style.width = "300px";
       }
     }
+    if(window.innerWidth<=1160)
+    {
+      flag = 1;
+      for(i=1;i<=4;i++)
+      {
+        $("#all_categories_cont div")[i].style.width = `${$("#all_categories_cont")[0].clientWidth/2 -50}px`;
+      }
+      $("#all_categories_cont div:nth-child(1)")[0].style.width = `${$("#all_categories_cont")[0].clientWidth -50}px`;
+      $("#The_features")[0].style.width = "928px";
+      $("#The_features").parent()[0].style.overflowX ="scroll";
+
     }
-    else{
+    }
+    else{//The cart is not visible 
+      if(flag===1)
+      {
+        flag = 0;
+        for(i=0;i<$("#all_categories_cont div").length;i++)
+        {
+          console.log("meowx");
+          $("#all_categories_cont div")[i].style.transitionDuration = "0s";
+        }
+        $("#all_categories_cont")[0].style.transitionDuration = "0s";
+      }
       for(i=1;i<$("#all_categories_cont div").length;i++)
       {
         $("#all_categories_cont div")[i].style.width=`${0.233 * window.innerWidth}px`;
@@ -278,6 +301,22 @@ $(document).ready(function(){
         $(".Featured-item")[i].style.width = "300px";
       }
     }
+    for(i=0;i<$("#all_categories_cont div").length;i++)//This is if the trasitionDuration was set to 0
+        {
+          $("#all_categories_cont div")[i].style.transitionDuration = "0.2s";
+        }
+    }
+    if(window.innerWidth<=1160)
+    {
+      flag = 1;
+      for(i=1;i<=4;i++)
+      {
+        $("#all_categories_cont div")[i].style.width = `${$("#all_categories_cont")[0].clientWidth/2 -50}px`;
+      }
+      $("#all_categories_cont div:nth-child(1)")[0].style.width = `${$("#all_categories_cont")[0].clientWidth -50}px`;
+      $("#The_features")[0].style.width = "928px";
+      $("#The_features").parent()[0].style.overflowX ="scroll";
+
     }
   }
 window.addEventListener("resize",responsive);
