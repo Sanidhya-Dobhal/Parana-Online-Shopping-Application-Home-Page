@@ -225,5 +225,59 @@ $(document).ready(function(){
     $("#cart").toggleClass("cart_inv");
     $("#cart").toggleClass("cart_vis");
     $("#main").toggleClass("main_size_mod");
+    responsive();
   });
   });
+
+  function responsive(){//We will not be directly using main's client width as there is a transition time of 0.2s
+    console.log($("#all_categories_cont")[0].clientWidth);
+    if($("#cart")[0].classList[0]==="cart_vis")
+    {
+      $("#all_categories_cont")[0].style.width = `${0.8*window.innerWidth * .881}px`;
+      for(i=1;i<$("#all_categories_cont div").length;i++)
+      {
+        $("#all_categories_cont div")[i].style.width=`${0.31 * 0.8*window.innerWidth * .881}px`;//What I am doing here is that initially the width of all_categories_cont is 75vw, but when the cart is open I want it to become 80vw, so it the categories div's have to be adjusted in the same proportion.
+        //So I caclulated what is the width of each div with respect to the all_categories_cont and the 23.3%(initially the width was calculated with respect to main) of main width comes out to be 31% of all_categories_cont. Mathematically, 23.3*100/75=31.0 as the all_cont_div is initially set to 75vw.
+        //This is required as when the cart is visible the all_categories_cont is made 80% of main width instead of 75% so the categories take more space than initial. 
+        //I am doing all this as when the cart is visible then 75% width seems to utilize less space for contenet an more space is left vacant
+      }
+      $("#all_categories_cont div:nth-child(1)")[0].style.width = `${0.31 *  0.8*window.innerWidth * .881* 2}px`;
+      $("#The_features")[0].style.width = `${0.85*window.innerWidth * .881}px`;//window.innerWidth*0.881 =main's width)
+      if(window.innerWidth <= 1260 && window.innerWidth>=1180)
+    {
+      for(i=0;i<$(".Featured-item").length;i++)
+      {
+        $(".Featured-item")[i].style.width = `${300-(1260-window.innerWidth)/3}px`;
+      }
+    }
+    else if(window.innerWidth > 1260){//Assuming when the screen size is greater than 1260
+      for(i=0;i<$(".Featured-item").length;i++)
+      {
+        $(".Featured-item")[i].style.width = "300px";
+      }
+    }
+    }
+    else{
+      for(i=1;i<$("#all_categories_cont div").length;i++)
+      {
+        $("#all_categories_cont div")[i].style.width=`${0.233 * window.innerWidth}px`;
+      }
+      $("#all_categories_cont div:nth-child(1)")[0].style.width = `${0.233 * window.innerWidth * 2}px`;
+      $("#all_categories_cont")[0].style.width = `${0.75*window.innerWidth}px`;
+      $("#The_features")[0].style.width = `${0.8*window.innerWidth}px`;
+      if(window.innerWidth <= 1210 && window.innerWidth>=1130)
+    {
+      for(i=0;i<$(".Featured-item").length;i++)
+      {
+        $(".Featured-item")[i].style.width = `${300-(1210-window.innerWidth)/3}px`;
+      }
+    }
+      else if(window.innerWidth > 1210){//Assuming when the screen size is greater than 1210
+      for(i=0;i<$(".Featured-item").length;i++)
+      {
+        $(".Featured-item")[i].style.width = "300px";
+      }
+    }
+    }
+  }
+window.addEventListener("resize",responsive);
