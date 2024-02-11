@@ -221,49 +221,9 @@ function total_calc()
 $(document).ready(function(){
   document.getElementById("Total_in_numbers").innerText = `₹ ${total}`;
   $("#cartAnchor").click(function(){
-    const main_width =$("main")[0].clientWidth;
     console.log("Clicked");
     $("#cart").toggleClass("cart_inv");
     $("#cart").toggleClass("cart_vis");
     $("#main").toggleClass("main_size_mod");
-    if($("#cart")[0].classList[0] ==="cart_inv")
-    {
-      $("#all_categories_cont div")[1].style.width=0.233* window.innerWidth;
-  }
-  else{
-    const target_main_width = window.innerWidth*0.881
-  }
-    // setTimeout(responsive,200);
   });
   });
-  $(window).resize(responsive);
-  function responsive(){
-    const main_width = $("main")[0].clientWidth;
-    let i;
-    $("#all_categories_cont")[0].style.width = `${main_width * 0.75}px`;
-    if($("#cart")[0].classList[0]==="cart_vis")
-    {
-    if(main_width<=1223)
-    {
-      for(i=1;i<$("#all_categories_cont div").length;i++)
-      {
-        $("#all_categories_cont div")[i].style.width =`${0.233 *main_width}px`;
-      }
-      $("#all_categories_cont div")[0].style.width =`${0.466 *main_width}px`;
-    }
-    else{
-      for(i=1;i<$("#all_categories_cont div").length;i++)
-      {
-        $("#all_categories_cont div")[i].style.width =`285px`;
-      }
-      $("#all_categories_cont div")[0].style.width =`570px`;
-    }
-  }
-  else{
-    for(i=1;i<$("#all_categories_cont div").length;i++)
-      {
-        $("#all_categories_cont div")[i].style.width =``;
-      }
-      $("#all_categories_cont div")[0].style.width =``;
-  }
-  };
