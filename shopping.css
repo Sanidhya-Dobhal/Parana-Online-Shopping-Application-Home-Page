@@ -209,12 +209,12 @@ footer div:nth-child(1):hover{
   margin-left:auto;
   overflow-y:scroll;
   transition-property:left;
-  transition-duration:0.2s;
+  transition-duration:2.2s;
 }
 main{
   width:100vw;
   transition-property:width;
-  transition-duration:0.2s;
+  transition-duration:2.2s;
 }
 .main_size_mod{
   width:88.1vw;
@@ -225,4 +225,29 @@ main{
   width:100%;
   margin:10px auto;
   border-bottom:4px solid white;
+}
+.ani_for_cats{
+  animation-name: ani;
+  animation-duration:2.2s;
+  animation-timing-function:linear; 
+}
+@media screen and (max-width:1390px)
+{
+  #all_categories_cont div{
+    width: 23.3vw;
+  }
+  #all_categories_cont div:nth-child(1)
+  {
+    width: 46.6vw;
+  }
+}
+@media screen and (max-width:1300px)
+{
+  #The_features{
+    width:1040px;
+  }
+}
+@media screen and (max-width:1060px)
+{
+  
 }
