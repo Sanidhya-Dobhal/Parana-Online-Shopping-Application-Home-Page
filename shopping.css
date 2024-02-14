@@ -282,6 +282,15 @@ main{
   left:0px;
   display:none;
 } 
+.resp_show{
+  display:none;
+  background-color:black;
+  color:white;
+
+}
+.resp_hide{
+  display:block;
+}
 @media screen and (max-width:1390px)
 {
   #all_categories_cont div{
@@ -320,5 +329,17 @@ main{
   }
   .cart_item_cls img{
     width: 29.3vw;
+  }
+  .resp_show{
+    display:block;
+  }
+  .resp_hide{
+    display:none;
+  }
+  .search_but{
+    width:35px;
+    display: block !important;
+    margin:0px;
+    text-align:center;
   }
 }

@@ -16,23 +16,27 @@
     <header id ="header">
       <div id ="real_header">
       <a href="#">Home</a>
-      <a href="#">Products</a>
+      <a href="#" class ="resp_hide">Products</a>
+      <select class = "resp_show">
+        <option name = "Products">Products</option>
+        <option name = "Categories">Categories</option>
+      </select>
       <div style="display: flex; height: 40px">
         <input
           class="form-control me-2"
           type="search"
           placeholder="Search"
           aria-label="Search"
-          style="width: 20vw;"
+          style = "width:23vw"
         />
         <button
-          class="btn btn-outline-success btn-light"
+          class="btn btn-outline-success btn-light search_but"
           type="submit"
         >
-          Search
+          Go
         </button>
       </div>
-      <a href="#">Categories</a>
+      <a href="#" class ="resp_hide">Categories</a>
       <a id = "cartAnchor">Cart</a>
     </div>
     </header>

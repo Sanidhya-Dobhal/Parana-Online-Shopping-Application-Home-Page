@@ -376,7 +376,6 @@ $(document).ready(function(){
   else{
     $("#overlay")[0].style.display ="none";
     $("#overlay")[0].style.backgroundColor = "rgba(10,0,0,0)";
-
   }
 }
 window.addEventListener("resize",responsive);
