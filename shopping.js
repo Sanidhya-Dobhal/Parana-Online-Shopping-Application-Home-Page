@@ -310,25 +310,54 @@ $(document).ready(function(){
     {
       flag = 1;
       for(i=1;i<=4;i++)
-      {
         $("#all_categories_cont div")[i].style.width = `${$("#all_categories_cont")[0].clientWidth/2 -50}px`;
-      }
       $("#all_categories_cont div:nth-child(1)")[0].style.width = `${$("#all_categories_cont")[0].clientWidth -50}px`;
       $("#The_features")[0].style.width = "928px";
       $("#The_features").parent()[0].style.overflowX ="scroll";
 
     }
-      if($("main")[0].clientWidth<=800)
+    if(window.innerWidth<=800)
     {
       $("#all_categories_cont")[0].style.display = "block";
       $("#tech_img")[0].setAttribute("src","Tech_cat_for_phone.png");
       $("#tech_img")[0].style.width = "200px";
       $("#tech_img").siblings()[0].style.width = "125px";
       for(i=0;i<$("#all_categories_cont div").length;i++)
-      {
         $("#all_categories_cont div")[i].style.width = `${$("#all_categories_cont")[0].clientWidth -50}px`;
-      }
     }
+    else if(window.innerWidth<=911)
+    {
+
+      if((($("main")[0].clientWidth === window.innerWidth) && ($("#cart")[0].classList[0]==="cart_vis")))//if cart is clicked and is going to be visible
+      {
+        $("#all_categories_cont")[0].style.display = "block";
+        $("#tech_img")[0].setAttribute("src","Tech_cat_for_phone.png");
+      $("#tech_img")[0].style.width = "200px";
+      // $("#tech_img").siblings()[0].style.width = "125px";
+      for(i=0;i<$("#all_categories_cont div").length;i++)
+        $("#all_categories_cont div")[i].style.width = `${(0.8*window.innerWidth * .881) -50}px`;
+      }
+      else if(($("main")[0].clientWidth !== window.innerWidth) && ($("#cart")[0].classList[0]==="cart_inv")){//This implies the cart is going to be invisible
+        console.log("heaven");
+        $("#all_categories_cont")[0].style.display ="grid";
+        $("#tech_img")[0].setAttribute("src","tech_category_img.png");
+        $("#tech_img").siblings()[0].style.width = "250px";
+        $("#tech_img")[0].style.width = "";
+        // $("#all_categories_cont")[0].style.display = "grid";
+      // $("#tech_img")[0].setAttribute("src","Tech_cat_for_phone.png");
+      // $("#tech_img")[0].style.width = "200px";
+      // $("#tech_img").siblings()[0].style.width = "125px";
+      // for(i=0;i<$("#all_categories_cont div").length;i++)
+      //   $("#all_categories_cont div")[i].style.width = `${$("#all_categories_cont")[0].clientWidth -50}px`;
+    }
+    else if(($("main")[0].clientWidth !== window.innerWidth)){//Implies the cart is visible 
+      $("#all_categories_cont")[0].style.display ="block";
+      for(i=0;i<$("#all_categories_cont div").length;i++)
+        $("#all_categories_cont div")[i].style.width = `${(0.8*window.innerWidth * .881) -50}px`;
+        $("#tech_img")[0].setAttribute("src","Tech_cat_for_phone.png");
+        $("#tech_img")[0].style.width = "200px";
+    }
+  }
     else{
       $("#all_categories_cont")[0].style.display ="grid";
       $("#tech_img")[0].setAttribute("src","tech_category_img.png");

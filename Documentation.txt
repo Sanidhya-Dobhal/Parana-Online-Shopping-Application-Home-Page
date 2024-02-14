@@ -4,3 +4,4 @@ cart: array : An array of objects that has 2 properties: (item)1 JSON object and
 arr_obj :
 button_add_to_cart():
 total_calc() - calculates and returns the total  
+click_var :It is the parameter of the function which is designed to take only boolean values as input, this boolean value is used to tell whether the responsive() is being executed because of resizing or because of cart being toggled
