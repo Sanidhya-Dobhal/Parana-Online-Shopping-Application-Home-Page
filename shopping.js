@@ -153,10 +153,7 @@ for (i=0;i<cart.length;i++)
     item_num.style.marginLeft ="1vw";
     item_num.value = cart[i].quantity;
     const cart_item_img = document.createElement("img");
-    cart_item_img.style.width ="11vw";
-    cart_item.style.width ="11.1vw";
-    cart_item.style.marginTop ="10px";
-    cart_item.style.border ="4px outset";
+    cart_item_img.style.height ="155px";
     cart_item.addEventListener("input",(e)=>{
       if ((e.target.value<'0'&& e.key>'9'))
         e.target.value = e.target.value.replace(/[^0-9]/g, '');//Used to restrict entering numbrer inside a text input field
@@ -187,6 +184,7 @@ for (i=0;i<cart.length;i++)
     // cart_item.style.backgroundColor ="rgb()"
     cart_item_img.setAttribute("src",cart[i].item.img);
     cart_item_img.setAttribute("pattern","\d*");
+    cart_item.classList.add("cart_item_cls");
     cart_item.appendChild(cart_item_img);
     cart_item.appendChild(cart_item_name);
     cart_item.appendChild(cart_item_quant);
@@ -222,19 +220,23 @@ function total_calc()
 $(document).ready(function(){
   document.getElementById("Total_in_numbers").innerText = `₹ ${total}`;
   $("#cartAnchor").click(function(){
-    console.log("Clicked");
     $("#cart").toggleClass("cart_inv");
     $("#cart").toggleClass("cart_vis");
-    $("#main").toggleClass("main_size_mod");
-    responsive();
+  if(window.innerWidth >600 && $("#cart")[0].classList[0] === "cart_vis")
+    $("#main").addClass("main_size_mod");
+  else if(window.innerWidth>600)
+  $("#main").removeClass("main_size_mod");
+  responsive();
   });
   });
 
   function responsive(){//We will not be directly using main's client width as there is a transition time of 0.2s
+    if(window.innerWidth>600){
     console.log($("#all_categories_cont")[0].clientWidth);
     if($("#cart")[0].classList[0]==="cart_vis")
     {
       $("#all_categories_cont")[0].style.width = `${0.8*window.innerWidth * .881}px`;
+      $("#main").addClass("main_size_mod");
       for(i=1;i<$("#all_categories_cont div").length;i++)
       {
         $("#all_categories_cont div")[i].style.width=`${0.31 * 0.8*window.innerWidth * .881}px`;//What I am doing here is that initially the width of all_categories_cont is 75vw, but when the cart is open I want it to become 80vw, so it the categories div's have to be adjusted in the same proportion.
@@ -276,7 +278,6 @@ $(document).ready(function(){
         flag = 0;
         for(i=0;i<$("#all_categories_cont div").length;i++)
         {
-          console.log("meowx");
           $("#all_categories_cont div")[i].style.transitionDuration = "0s";
         }
         $("#all_categories_cont")[0].style.transitionDuration = "0s";
@@ -314,7 +315,6 @@ $(document).ready(function(){
       $("#all_categories_cont div:nth-child(1)")[0].style.width = `${$("#all_categories_cont")[0].clientWidth -50}px`;
       $("#The_features")[0].style.width = "928px";
       $("#The_features").parent()[0].style.overflowX ="scroll";
-
     }
     if(window.innerWidth<=800)
     {
@@ -343,12 +343,6 @@ $(document).ready(function(){
         $("#tech_img")[0].setAttribute("src","tech_category_img.png");
         $("#tech_img").siblings()[0].style.width = "250px";
         $("#tech_img")[0].style.width = "";
-        // $("#all_categories_cont")[0].style.display = "grid";
-      // $("#tech_img")[0].setAttribute("src","Tech_cat_for_phone.png");
-      // $("#tech_img")[0].style.width = "200px";
-      // $("#tech_img").siblings()[0].style.width = "125px";
-      // for(i=0;i<$("#all_categories_cont div").length;i++)
-      //   $("#all_categories_cont div")[i].style.width = `${$("#all_categories_cont")[0].clientWidth -50}px`;
     }
     else if(($("main")[0].clientWidth !== window.innerWidth)){//Implies the cart is visible 
       $("#all_categories_cont")[0].style.display ="block";
@@ -365,5 +359,25 @@ $(document).ready(function(){
       $("#tech_img")[0].style.width = "";
     }
   }
+  else{
+    $("main")[0].style.width = window.innerWidth;
+    $("#all_categories_cont")[0].style.display ="block";
+    $("#tech_img")[0].setAttribute("src","Tech_cat_for_phone.png");
+    for(i=0;i<$("#all_categories_cont div").length;i++)
+      $("#all_categories_cont div")[i].style.width = `${$("#all_categories_cont")[0].clientWidth -50}px`;
+    $("main")[0].classList.remove("main_size_mod");
+    $("#The_features").parent()[0].style.overflowX ="scroll";
+  }
+  //Overlay:
+  if($("#cart")[0].classList[0]=== "cart_vis" && window.innerWidth<=600){
+    $("#overlay")[0].style.display ="block";
+    $("#overlay")[0].style.backgroundColor = "rgba(0,0,0,0.5)";
+  }
+  else{
+    $("#overlay")[0].style.display ="none";
+    $("#overlay")[0].style.backgroundColor = "rgba(10,0,0,0)";
+
+  }
+}
 window.addEventListener("resize",responsive);
 responsive();
