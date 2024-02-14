@@ -306,7 +306,7 @@ $(document).ready(function(){
           $("#all_categories_cont div")[i].style.transitionDuration = "0.2s";
         }
     }
-    if(window.innerWidth<=1160)
+    if(window.innerWidth<=1160)//For the first section, featured items
     {
       flag = 1;
       for(i=1;i<=4;i++)
@@ -318,5 +318,25 @@ $(document).ready(function(){
       $("#The_features").parent()[0].style.overflowX ="scroll";
 
     }
+    if($("main")[0].clientWidth<=800)
+    {
+      $("#all_categories_cont")[0].style.display = "block";
+      $("#tech_img")[0].setAttribute("src","Tech_cat_for_phone.png");
+      $("#tech_img")[0].style.width = "200px";
+      $("#tech_img").siblings()[0].style.width = "125px";
+      for(i=0;i<$("#all_categories_cont div").length;i++)
+      {
+        $("#all_categories_cont div")[i].style.width = `${$("#all_categories_cont")[0].clientWidth -50}px`;
+      }
+
+    }
+    else{
+      $("#all_categories_cont")[0].style.display ="grid";
+      $("#tech_img")[0].setAttribute("src","tech_category_img.png");
+      $("#tech_img").siblings()[0].style.width = "250px";
+      $("#tech_img")[0].style.width = "";
+      
+    }
   }
 window.addEventListener("resize",responsive);
+responsive();

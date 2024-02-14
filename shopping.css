@@ -161,6 +161,7 @@
     align-items:center;
     text-align:center;
     width:125px;
+    margin:auto;
   }
   #all_categories_cont div:nth-child(1) p{/*This is for the electronics text*/
     width:250px;
