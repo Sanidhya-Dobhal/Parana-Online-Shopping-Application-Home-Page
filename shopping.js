@@ -154,7 +154,7 @@ for (i=0;i<cart.length;i++)
     item_num.value = cart[i].quantity;
     const cart_item_img = document.createElement("img");
     cart_item_img.style.height ="155px";
-    cart_item.addEventListener("input",(e)=>{
+    item_num.addEventListener("input",(e)=>{
       if ((e.target.value<'0'&& e.key>'9'))
         e.target.value = e.target.value.replace(/[^0-9]/g, '');//Used to restrict entering numbrer inside a text input field
       else{
@@ -167,8 +167,8 @@ for (i=0;i<cart.length;i++)
           if(cart[i].item.name===prod_name)
             break;
         }
+        all_cards[i].getElementsByTagName("div")[0].getElementsByTagName("input")[0].style.width="25.3vw";
         all_cards[i].getElementsByTagName("div")[0].getElementsByTagName("input")[0].value = e.target.value;
-        console.log(e.target.value);
         cart[i].quantity = e.target.value;
         if(e.target.value === '0'|| e.target.value ==='')
         {
@@ -181,9 +181,7 @@ for (i=0;i<cart.length;i++)
       }
       total = total_calc();
     });
-    // cart_item.style.backgroundColor ="rgb()"
     cart_item_img.setAttribute("src",cart[i].item.img);
-    cart_item_img.setAttribute("pattern","\d*");
     cart_item.classList.add("cart_item_cls");
     cart_item.appendChild(cart_item_img);
     cart_item.appendChild(cart_item_name);
@@ -362,7 +360,9 @@ $(document).ready(function(){
   else{
     $("main")[0].style.width = window.innerWidth;
     $("#all_categories_cont")[0].style.display ="block";
+    $("#all_categories_cont")[0].style.width =0.8;
     $("#tech_img")[0].setAttribute("src","Tech_cat_for_phone.png");
+    $("#all_categories_cont")[0].style.width = `${0.9 *window.innerWidth * .9}px`;
     for(i=0;i<$("#all_categories_cont div").length;i++)
       $("#all_categories_cont div")[i].style.width = `${$("#all_categories_cont")[0].clientWidth -50}px`;
     $("main")[0].classList.remove("main_size_mod");
@@ -371,11 +371,9 @@ $(document).ready(function(){
   //Overlay:
   if($("#cart")[0].classList[0]=== "cart_vis" && window.innerWidth<=600){
     $("#overlay")[0].style.display ="block";
-    $("#overlay")[0].style.backgroundColor = "rgba(0,0,0,0.5)";
   }
   else{
     $("#overlay")[0].style.display ="none";
-    $("#overlay")[0].style.backgroundColor = "rgba(10,0,0,0)";
   }
 }
 window.addEventListener("resize",responsive);
