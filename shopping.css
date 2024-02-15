@@ -63,7 +63,7 @@
   header a:nth-child(2):hover::before {
     width: 68px;
   }
-  header a:nth-child(4):hover::before {
+  #cat_in_header:hover::before {
     width: 80px;
   }
   header a:nth-child(5):hover::before {
