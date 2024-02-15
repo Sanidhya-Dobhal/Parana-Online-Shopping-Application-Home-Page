@@ -65,6 +65,7 @@ function first_item_handler(e)
   let inp = document.createElement("input");
   inp.setAttribute("type","number");
   inp.setAttribute("min",0);
+  inp.setAttribute("max",999);
   inp.style.width ="150px";
   inp.addEventListener("input",val_is_0);
   inp.addEventListener("input",cart_mod);
@@ -117,6 +118,10 @@ function val_is_0(event)
   }
 function cart_mod(event){
   let all_cards = $(".all_cards");
+  if(event.target.value>999)
+  {
+    event.target.value = Math.floor(event.target.value/10);
+  }
   for (i=0;i<all_cards.length;i++)
   {
     if(all_cards[i].getElementsByTagName("button").length===0)//Only the elements that have quantity field present would be able to enter
@@ -127,7 +132,7 @@ function cart_mod(event){
           cart[i].quantity = event.target.value;
     }
   }
-    list_insertion();
+  list_insertion();
 }
 function list_insertion()
 {
@@ -147,6 +152,7 @@ for (i=0;i<cart.length;i++)
     cart_item_quant.style.display ="inline";
     const item_num = document.createElement("input");
     item_num.setAttribute("type","text");
+    item_num.setAttribute("maxlength","3");
     item_num.style.width ="35px";
     item_num.style.height ="17px";
     item_num.style.fontSize ="15px";
@@ -155,9 +161,27 @@ for (i=0;i<cart.length;i++)
     const cart_item_img = document.createElement("img");
     cart_item_img.style.height ="155px";
     item_num.addEventListener("input",(e)=>{
-      if ((e.target.value<'0'&& e.key>'9'))
-        e.target.value = e.target.value.replace(/[^0-9]/g, '');//Used to restrict entering numbrer inside a text input field
-      else{
+      if (e.data!== null){
+        // e.target.value = e.target.value.replace(/[^0-9]/g, '');
+        if(e.data[0]<'0'|| e.data[0]>'9')//this if statement is used to restrict the user from entering anything other than number 
+        {
+          console.log(e.data);
+          let j=0;
+          for(j=0;j<e.target.value.length;j++){
+            if(e.target.value.charAt(j)===e.data){
+              console.log("caught");
+              break;
+            }
+            
+          }
+          if(j===e.target.value.length-1)
+                e.target.value = e.target.value.substring(0,e.target.value.length-1);
+              else
+              {
+                 e.target.value = e.target.value.substring(0,j) + e.target.value.substring(j+1,e.target.value.length);
+              }
+        }
+      }
         const cart_itm_par = ($(e.target).parent());
         const prod_name= cart_itm_par[0].getElementsByTagName("p")[0].innerText;
         const all_cards= document.getElementsByClassName("all_cards");
@@ -167,7 +191,6 @@ for (i=0;i<cart.length;i++)
           if(cart[i].item.name===prod_name)
             break;
         }
-        all_cards[i].getElementsByTagName("div")[0].getElementsByTagName("input")[0].style.width="25.3vw";
         all_cards[i].getElementsByTagName("div")[0].getElementsByTagName("input")[0].value = e.target.value;
         cart[i].quantity = e.target.value;
         if(e.target.value === '0'|| e.target.value ==='')
@@ -177,7 +200,6 @@ for (i=0;i<cart.length;i++)
           but = button_add_to_cart();
           all_cards[i].appendChild(but);
           cart[i].quantity = 0;
-        }
       }
       total = total_calc();
     });
@@ -365,8 +387,9 @@ $(document).ready(function(){
     $("#all_categories_cont")[0].style.width = `${0.9 *window.innerWidth * .9}px`;
     for(i=0;i<$("#all_categories_cont div").length;i++)
       $("#all_categories_cont div")[i].style.width = `${$("#all_categories_cont")[0].clientWidth -50}px`;
-    $("main")[0].classList.remove("main_size_mod");
     $("#The_features").parent()[0].style.overflowX ="scroll";
+    $("main")[0].classList.remove("main_size_mod");
+
   }
   //Overlay:
   if($("#cart")[0].classList[0]=== "cart_vis" && window.innerWidth<=600){

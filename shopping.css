@@ -284,7 +284,7 @@ main{
 } 
 .resp_show{
   display:none;
-  background-color:rgb(16,20,25);
+  background-color:black;
   color:white;
 
 }
@@ -339,7 +339,7 @@ main{
   .search_but{
     width:35px;
     display: block !important;
-    margin:0px;
+    
     text-align:center;
   }
 }
