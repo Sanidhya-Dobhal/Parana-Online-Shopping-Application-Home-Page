@@ -11,31 +11,37 @@
         "category":"Electronics",
         "img":"watch.png"
         },
-    "Product3":{
+     "Product3":{
+        "name":"Coffee",
+        "price":400,
+        "category":"Kitchen",
+        "img":"Images/Coffee.png"
+    },
+    "Product4":{
         "name":"Indoor plant",
         "price":800,
         "category":"Decoration",
         "img":"Screenshot 2024-01-27 at 12.57.55 AM.png"
         },
-    "Product4":{
+    "Product5":{
     "name":"T-Shirt",
     "price":369,
     "category":"Fashion",
     "img":"T-shirt.png"
     },
-    "Product5":{
+    "Product6":{
     "name":"Clock",
     "price":2000,
     "category":"Electronics",
     "img":"insung-yoon-w2JtIQQXoRU-unsplash.jpg"
     },
-    "Product6":{
+    "Product7":{
         "name":"Football",
         "price":549,
         "category":"Sports",
         "img":"football.png"
     },
-    "Product7":{
+    "Product8":{
         "name":"Dinner-Set",
         "price":1500,
         "category":"Kitchen",

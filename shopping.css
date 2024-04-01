@@ -72,7 +72,7 @@
   .Heading_in_page{
     background-color: rgb(15, 20, 26);
     color: rgb(219, 241, 22);
-    width: 300px;
+    width: 250px;
     padding-bottom: 15px;
     padding-top: 15px;
     font-size: 25px;
@@ -105,7 +105,7 @@
     display:block;
     margin:8px auto;
     width:250px;
-    height:auto;
+    height:163px;
   }
   .Feat_name{
     margin:10px; 
@@ -272,7 +272,7 @@ main{
   animation-duration:2.2s;
   animation-timing-function:linear; 
 }
-#overlay{
+#overlay{ 
   width:100vw;
   height:100vh;
   background-color:rgba(0,0,0,0.5);
