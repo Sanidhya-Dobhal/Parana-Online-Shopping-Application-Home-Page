@@ -16,6 +16,7 @@
     width:98vw;
     height:60px;
     margin:auto;
+    font-family:"Poppins"
   }
   .me-2 {
     margin-right: 0px !important;
@@ -41,6 +42,7 @@
   }
   #cartAnchor:hover{
     color:orange;
+    cursor:pointer;
   }
   #cartAnchor:hover::before{
     width:32px;
@@ -192,7 +194,6 @@
   margin:0px;
   overflow-x:scroll;
 }
-
 .pro_list_item_image
 {
   width:200px;
@@ -290,6 +291,9 @@ main{
 }
 .resp_hide{
   display:block;
+}
+.all_cards{
+  border-radius:11px;
 }
 @media screen and (max-width:1390px)
 {

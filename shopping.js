@@ -239,7 +239,7 @@ function total_calc()
 }
 $(document).ready(function(){
   document.getElementById("Total_in_numbers").innerText = `₹ ${total}`;
-  $("#cartAnchor").click(function(){
+  $("#cartAnchor").parent().click(function(){
     $("#cart").toggleClass("cart_inv");
     $("#cart").toggleClass("cart_vis");
   if(window.innerWidth >600 && $("#cart")[0].classList[0] === "cart_vis")
