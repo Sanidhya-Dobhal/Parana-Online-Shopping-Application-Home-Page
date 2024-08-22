@@ -1,7 +1,7 @@
 all_cards: class : for all the cards
-cart_mod: event handler: function that modifies the cart when the number of item is entered or changed
+cartUpdater: event handler: function that modifies the cart when the number of item is entered or changed
 cart: array : An array of objects that has 2 properties: (item)1 JSON object and another the (quantity)quantity of the object
 arr_obj :
-button_add_to_cart():
-total_calc() - calculates and returns the total  
+addToCartButtonGenerator():
+totalCostCalculatonAndLocalStorage() - calculates and returns the total  
 #The_real_list: The div that is continuously getting re-rendered

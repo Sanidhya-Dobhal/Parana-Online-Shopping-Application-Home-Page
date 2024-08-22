@@ -1,50 +1,50 @@
 {
-    "Product1":{
-    "name":"Headphones",
-    "price":10000,
-    "category":"Electronics",
-    "img":"Images/Headphones.png"
-    },
-    "Product2":{
-        "name":"Watch",
-        "price":1000,
-        "category":"Electronics",
-        "img":"Images/watch.png"
-        },
-     "Product3":{
-        "name":"Coffee",
-        "price":400,
-        "category":"Kitchen",
-        "img":"Images/Coffee.png"
-    },
-    "Product4":{
-        "name":"Indoor plant",
-        "price":800,
-        "category":"Decoration",
-        "img":"Images/Indoor_plant.png"
-        },
-    "Product5":{
-    "name":"T-Shirt",
-    "price":369,
-    "category":"Fashion",
-    "img":"Images/T-shirt.png"
-    },
-    "Product6":{
-    "name":"Clock",
-    "price":2000,
-    "category":"Electronics",
-    "img":"Images/clock.jpg"
-    },
-    "Product7":{
-        "name":"Football",
-        "price":549,
-        "category":"Sports",
-        "img":"Images/football.png"
-    },
-    "Product8":{
-        "name":"Dinner-Set",
-        "price":1500,
-        "category":"Kitchen",
-        "img":"Images/Dinner-set.png"
-        }
+  "Product1": {
+    "name": "Headphones",
+    "price": 10000,
+    "category": "Electronics",
+    "img": "Images/Headphones.png"
+  },
+  "Product2": {
+    "name": "Watch",
+    "price": 1000,
+    "category": "Electronics",
+    "img": "Images/watch.png"
+  },
+  "Product3": {
+    "name": "Coffee",
+    "price": 400,
+    "category": "Kitchen",
+    "img": "Images/Coffee.png"
+  },
+  "Product4": {
+    "name": "Indoor plant",
+    "price": 800,
+    "category": "Decoration",
+    "img": "Images/Indoor_plant.png"
+  },
+  "Product5": {
+    "name": "T-Shirt",
+    "price": 370,
+    "category": "Fashion",
+    "img": "Images/T-shirt.png"
+  },
+  "Product6": {
+    "name": "Clock",
+    "price": 2000,
+    "category": "Electronics",
+    "img": "Images/clock.jpg"
+  },
+  "Product7": {
+    "name": "Football",
+    "price": 550,
+    "category": "Sports",
+    "img": "Images/football.png"
+  },
+  "Product8": {
+    "name": "Dinner-Set",
+    "price": 1500,
+    "category": "Kitchen",
+    "img": "Images/Dinner-set.png"
+  }
 }
