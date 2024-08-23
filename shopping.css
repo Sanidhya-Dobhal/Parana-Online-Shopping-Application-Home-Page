@@ -121,7 +121,7 @@ header a:nth-child(5):hover::before {
   font-weight: 600;
   margin-left: 7px;
 }
-#categories_and_prod_list {
+#categories-and-prod-list {
   background-color: #404040;
   color: white;
   padding-bottom: 50px;
