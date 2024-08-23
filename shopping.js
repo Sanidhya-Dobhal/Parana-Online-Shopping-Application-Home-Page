@@ -61,6 +61,7 @@ xhr.onload = function () {
     }
   }
   cartItemsRenderer();
+  setTimeout(() => window.scrollTo(0, 0), 10); //be at the top when document loads
 };
 function firstItemHandler(e) {
   let all_cards = document.getElementsByClassName("all_cards");
