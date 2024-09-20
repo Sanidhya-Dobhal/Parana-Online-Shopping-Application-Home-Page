@@ -9,55 +9,63 @@ function heightSetter() {
 }
 xhr.open("GET", "List.json", true);
 xhr.onload = function () {
-  let res_obj = JSON.parse(xhr.responseText);
-  for (let i in res_obj) {
+  let respObject = JSON.parse(xhr.responseText);
+  for (let i in respObject) {
+    if (localStorage.getItem("cartItems")) {
+      cart = JSON.parse(localStorage.getItem("cartItems"));
+    } else {
+      let arr_obj = {
+        item: respObject[i],
+        quantity: 0,
+      };
+      cart.push(arr_obj);
+    }
     const card = document.createElement("div");
     $("#pro_list")[0].appendChild(card);
     card.style.minWidth = "200px";
     card.style.margin = "15px";
     $(card).addClass("buy_btn_present");
     $(card).addClass("all_cards");
-    const prod_img = document.createElement("img");
-    prod_img.setAttribute("src", `${res_obj[i].img}`);
-    prod_img.classList.add("pro_list_item_image");
-    card.appendChild(prod_img);
-    const ele = document.createElement("p");
-    ele.innerText = `Name: ${res_obj[i].name}`;
-    card.appendChild(ele);
+    const productImg = document.createElement("img");
+    productImg.setAttribute("src", `${respObject[i].img}`);
+    productImg.classList.add("pro_list_item_image");
+    productImg.addEventListener("dblclick", () => {
+      location = `./individualItemPage/index.html?${i}`;
+    });
+    card.appendChild(productImg);
+    const productName = document.createElement("p");
+    productName.innerText = `Name: ${respObject[i].name}`;
+    productName.style.marginTop = "12px";
+    card.appendChild(productName);
     const ele_price = document.createElement("p");
-    ele_price.innerText = `Price: ₹${res_obj[i].price}`;
+    ele_price.innerText = `Price: ₹${respObject[i].price}`;
     card.appendChild(ele_price);
-    const ele_cat = document.createElement("p");
-    ele_cat.innerText = `Category: ${res_obj[i].category}`;
-    card.appendChild(ele_cat);
-    const but = document.createElement("button");
-    but.innerText = "Add to cart";
-    but.classList.add("buy_but");
-    but.classList.add("btn");
-    but.classList.add("btn-primary");
-    $(but).css("display", "block");
-    $(but).css("margin", "auto");
-    card.appendChild(but);
-    $(but).click(firstItemHandler);
-    if (localStorage.getItem("cartItems")) {
-      cart = JSON.parse(localStorage.getItem("cartItems"));
-    } else {
-      let arr_obj = {
-        item: res_obj[i],
-        quantity: 0,
-      };
-      cart.push(arr_obj);
-    }
+    const elementCategory = document.createElement("p");
+    elementCategory.innerText = `Category: ${respObject[i].category}`;
+    elementCategory.style.marginBottom = "40px";
+    card.appendChild(elementCategory);
+    const infoButton = document.createElement("button");
+    infoButton.classList.add("btn");
+    infoButton.classList.add("btn-outline-info");
+    infoButton.classList.add("item-buttons-in-product-list");
+    infoButton.style.display = "block";
+    infoButton.innerText = "More details";
+    infoButton.addEventListener("click", () => {
+      location = `./individualItemPage/index.html?${i}`;
+    });
+    card.appendChild(infoButton);
+    const addToCartButton = addToCartButtonGenerator();
+    card.appendChild(addToCartButton);
   }
   for (let i = 0; i < cart.length; i++) {
     let qtyBoxInProductList;
     if (cart[i]?.quantity > 0) {
       qtyBoxInProductList = generateInputBoxInItemList(cart[i].quantity);
-      let item_box = document.getElementsByClassName("all_cards")[i];
-      item_box.appendChild(qtyBoxInProductList);
-      item_box.classList.remove("buy_btn_present");
-      item_box.classList.add("buy_btn_absent");
-      item_box.getElementsByTagName("button")[0].remove();
+      let itemCard = $(".all_cards")[i];
+      itemCard.appendChild(qtyBoxInProductList);
+      itemCard.classList.remove("buy_btn_present");
+      itemCard.classList.add("buy_btn_absent");
+      itemCard.getElementsByTagName("button")[1].remove();
     }
   }
   cartItemsRenderer();
@@ -85,7 +93,8 @@ function generateInputBoxInItemList(number) {
   let new_qty_box = document.createElement("div");
   let pa = document.createElement("p");
   pa.innerText = "Qty: ";
-  pa.style.marginTop = "10px";
+  pa.style.marginBottom = 0;
+  pa.style.marginRight = "4px";
   let inp = document.createElement("input");
   inp.setAttribute("type", "number");
   inp.setAttribute("min", 0);
@@ -108,6 +117,7 @@ function valueIs0(event) {
     let all_cards = document.getElementsByClassName("all_cards");
     for (i = 0; i < all_cards.length; i++) {
       if (all_cards[i].getElementsByTagName("input")[0] === event.target) {
+        console.log("new", all_cards[i].getElementsByTagName("input")[0]);
         all_cards[i].getElementsByTagName("input")[0].remove();
         const but = addToCartButtonGenerator();
         all_cards[i].appendChild(but);
@@ -121,11 +131,11 @@ function valueIs0(event) {
 function addToCartButtonGenerator() {
   but = document.createElement("button");
   but.innerText = "Add to cart";
-  but.classList.add("buy_but");
   but.classList.add("btn");
   but.classList.add("btn-primary");
+  but.classList.add("item-buttons-in-product-list");
   but.style.display = "block";
-  but.style.margin = "auto";
+  but.style.marginBottom = "12px";
   $(but).click(firstItemHandler);
   return but;
 }
@@ -135,7 +145,7 @@ function cartUpdater(event) {
     event.target.value = Math.floor(event.target.value / 10);
   }
   for (i = 0; i < all_cards.length; i++) {
-    if (all_cards[i].getElementsByTagName("button").length === 0) {
+    if (all_cards[i].getElementsByTagName("input").length !== 0) {
       //Only the elements that have quantity field present would be able to enter
       let inp_field = all_cards[i].getElementsByTagName("input")[0];
       if (inp_field === event.target)
@@ -146,10 +156,10 @@ function cartUpdater(event) {
   cartItemsRenderer();
 }
 function cartItemsRenderer() {
-  $("#The_real_list").remove();
-  let realCartItemsList = document.createElement("div");
-  realCartItemsList.setAttribute("id", "The_real_list");
-  $("#cart")[0].appendChild(realCartItemsList);
+  $("#item-list-in-cart").remove();
+  let cartItemsList = document.createElement("div");
+  cartItemsList.setAttribute("id", "item-list-in-cart");
+  $("#cart")[0].appendChild(cartItemsList);
   for (i = 0; i < cart.length; i++) {
     if (cart[i].quantity != 0) {
       let cart_item = document.createElement("div");
@@ -220,12 +230,12 @@ function cartItemsRenderer() {
       cart_item.appendChild(cart_item_name);
       cart_item.appendChild(itemPrice);
       cart_item.appendChild(item_num);
-      realCartItemsList.appendChild(cart_item);
+      cartItemsList.appendChild(cart_item);
     }
     total = totalCostCalculatonAndLocalStorage();
   }
 }
-$("#buy_button").click(() => {
+$("#buy-button-in-cart").click(() => {
   let total = totalCostCalculatonAndLocalStorage();
   if (total === 0) {
     alert("You have bought no items");
@@ -246,13 +256,13 @@ function totalCostCalculatonAndLocalStorage() {
   for (i in cart) {
     tot = tot + cart[i].item.price * cart[i].quantity;
   }
-  $("#Total_in_numbers")[0].innerText = `₹ ${tot}`;
+  $("#total-in-numbers")[0].innerText = `₹ ${tot}`;
   localStorage.setItem("cartItems", JSON.stringify(cart));
   return tot;
 }
 $(document).ready(function () {
-  $("#Total_in_numbers")[0].innerText = `₹ ${total}`;
-  $("#cartAnchor")
+  $("#total-in-numbers")[0].innerText = `₹ ${total}`;
+  $("#cart-anchor-in-header")
     .parent()
     .click(function () {
       $("#cart").toggleClass("cart_inv");

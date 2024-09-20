@@ -1,48 +1,64 @@
 {
   "Product1": {
     "name": "Headphones",
+    "descriptiveName": "Bass boost bluetooth headphones with noise cancellation",
     "price": 10000,
     "category": "Electronics",
-    "img": "Images/Headphones.png"
+    "img": "Images/Headphones.png",
+    "description": "Experience the pinnacle of sound quality with the Bony's bass boost bluetooth headphones 🎧 with noise cancellation. Designed to deliver rich, immersive audio, these headphones not just have a immersive bass boost feature which is a treat to the ear👂 for all music listeners, game players and movie watches but it also comes with advanced noise cancellation that can be automatic or manual based on the user's selection.\n\nCrafted with premium materials and ergonomic design, the headphones also prioritizes your comfort. You can enjoy up to 30 hours of playback on a single charge, and with fast charging capabilities, just 10 minutes of charging⚡ gives you an additional 3 hours of use. The Bony bass boost bluetooth headphones with noise cancellation offers unparalleled comfort for extended listening sessions.\n\nWhether you're commuting, working out, or simply relaxing at home, the Bony bass boost bluetooth headphones with noise cancellationis the perfect companion for your audio needs.\nGet your's today.✅"
   },
   "Product2": {
     "name": "Watch",
+    "descriptiveName": "Smart watch with HD display, voice control and fitness tracking",
+    "description": "Introducing Maple's Smart Watch with HD Display ⌚, combining sleek design, advanced technology, and comprehensive fitness tracking in one elegant device. The vibrant HD touchscreen display 🌟 offers crystal-clear visuals, making it easy to navigate through apps, notifications, and fitness stats. Its intuitive interface allows for effortless interaction, while the robust build ensures durability for everyday wear.\n\nEquipped with voice control 🎤, this smartwatch lets you manage your tasks hands-free, whether you're setting reminders, checking the weather 🌦️, or controlling your music 🎶. The integrated fitness tracking system 🏃‍♂️ monitors your daily activities, including steps, calories burned 🔥, heart rate ❤️, and sleep patterns 🌙, providing detailed insights to help you maintain a healthy lifestyle. With built-in GPS 🗺️, you can accurately track outdoor runs or walks without needing to carry your phone.\n\nStay connected 💬 as the watch syncs seamlessly with your smartphone, delivering notifications for calls, messages, and social media directly to your wrist. Its long-lasting battery 🔋 ensures you stay powered throughout the day, with quick charging to keep you on the move. Water-resistant 💧 and suitable for all-day wear, this smart watch is not only a stylish accessory but also a powerful tool to help you stay active and organized. Available in a variety of colors 🎨 to match your personal style.",
     "price": 1000,
     "category": "Electronics",
     "img": "Images/watch.png"
   },
   "Product3": {
     "name": "Coffee",
+    "descriptiveName": "Instant coffee rich in caffine jar | Strong coffee",
+    "description": "Introducing Lesscafe's Instant Coffee Rich in Caffeine ☕—the perfect pick-me-up for those who crave a bold, energizing cup of coffee. Made from premium quality coffee beans, this instant coffee delivers a strong, robust flavor 🌿, giving you the intensity you need to jump-start your day or power through the afternoon. \n\nPacked with high caffeine content ⚡, each sip provides a quick and convenient energy boost, perfect for busy mornings or when you need to stay focused. Simply stir a spoonful into hot water, and you'll have a rich, aromatic coffee experience in seconds ⏳. The smooth blend ensures a full-bodied taste that satisfies coffee enthusiasts who prefer a stronger brew.\n\nHoused in a convenient jar 🏺, it’s designed to stay fresh for longer, ensuring every cup tastes as good as the first. Whether you're at home, in the office, or on the go, this instant coffee delivers maximum flavor and energy when you need it most. Elevate your coffee game with a cup that's as bold and energizing as you are!",
     "price": 400,
     "category": "Kitchen",
     "img": "Images/Coffee.png"
   },
   "Product4": {
     "name": "Indoor plant",
+    "descriptiveName": "Artificial decorative indoor plant (small, height:17cm)",
+    "description": "Introducing Natural's Artificial Decorative Indoor Plant 🌿, a stylish and hassle-free way to bring a touch of nature into your home or office. This small indoor plant (height: 17cm) is perfect for adding a fresh, green accent to any space, whether it's a living room, desk, or bookshelf.\n\nCrafted with high-quality, realistic materials, this artificial plant mimics the look of a real plant without the need for water, sunlight, or maintenance 🪴. Its compact size makes it ideal for small spaces, while its lush, lifelike appearance brings a sense of calm and natural beauty to your indoor environment.\n\nDesigned to stay vibrant and green all year round, this decorative piece is perfect for those who love the look of plants but don't have the time or a green thumb 🌱. Place it anywhere for an instant decorative upgrade without worrying about care or upkeep. Available in a modern pot that complements any decor style, this artificial plant is a versatile and long-lasting addition to your indoor space.",
     "price": 800,
     "category": "Decoration",
     "img": "Images/Indoor_plant.png"
   },
   "Product5": {
     "name": "T-Shirt",
+    "descriptiveName": "White casual cotton T-shirt| Half sleeve",
+    "description": "Introducing Rainbow's White Casual Cotton T-Shirt 👕, a wardrobe essential designed for comfort and effortless style. Made from high-quality, breathable cotton, this t-shirt is perfect for everyday wear, whether you're lounging at home or heading out for a casual outing.\n\nWith its classic half-sleeve design, this t-shirt offers a relaxed fit that pairs easily with jeans, shorts, or your favorite joggers. The soft cotton fabric ensures all-day comfort, keeping you cool and comfortable even on warmer days ☀️.\n\nIts timeless white color makes it a versatile piece that can be dressed up or down, while the durable stitching ensures it holds up wash after wash 🧺. Whether you're layering it under a jacket or wearing it solo, this cotton t-shirt is a go-to option for effortless, casual style. Perfect for men and women who appreciate comfort without compromising on style.",
     "price": 370,
     "category": "Fashion",
     "img": "Images/T-shirt.png"
   },
   "Product6": {
     "name": "Clock",
+    "descriptiveName": "Twin bell analog alarm clock",
+    "description": "Introducing Silence's Twin Bell Analog Alarm Clock ⏰, a charming and reliable addition to your bedside table. With its classic twin bell design and analog face, this clock combines vintage appeal with functional practicality, making it both a stylish and dependable timepiece.\n\nFeaturing a loud, clear alarm 🚨, this clock ensures you wake up on time, every time. The large, easy-to-read numerals and contrasting hands make it simple to check the time at a glance, even in the dark. Its sturdy metal construction adds a touch of elegance while ensuring durability for years to come.\n\nThe snooze function ⏳ allows you to catch a few extra minutes of sleep, and the precision quartz movement guarantees accurate timekeeping. Available in a variety of classic colors, this analog alarm clock is perfect for those who appreciate a blend of retro charm and modern reliability. Add a touch of nostalgia to your mornings with this timeless timepiece.",
     "price": 2000,
     "category": "Electronics",
     "img": "Images/clock.jpg"
   },
   "Product7": {
     "name": "Football",
+    "descriptiveName": "Rubber moulded black and white football",
+    "description": "Introducing Colour's Rubber Moulded Black and White Football ⚽, designed for both style and durability on the field. Crafted with high-quality rubber moulding, this football features a classic black and white pattern 🏴‍☠️ that ensures a timeless, eye-catching look.\n\nEngineered for excellent performance, this football offers a consistent bounce 🏐 and grip, making it ideal for practice and casual games alike. The rubber construction enhances its durability, withstanding tough play 💪 and various weather conditions ☀️🌧️, while maintaining its shape and performance.\n\nWhether you're playing a friendly match or training for the big game 🏆, this football delivers reliable performance and a satisfying feel. Its classic design not only makes it a standout on the pitch but also a great addition to your sports gear collection. Enjoy endless fun and practice with a football that combines durability, style, and excellent playability.",
     "price": 550,
     "category": "Sports",
     "img": "Images/football.png"
   },
   "Product8": {
     "name": "Dinner-Set",
+    "descriptiveName": "16 pieces dinner set with 4 of each item",
+    "description": "Introducing hunger's 16-Piece Dinner Set, designed to elevate your dining experience with elegance and functionality. This set includes 4 of each essential item: dinner plates 🍽️, salad plates 🥗, soup bowls 🍲, and mugs ☕, providing a complete service for a family or small gathering.\n\nCrafted from high-quality, durable materials, this dinner set is perfect for everyday use as well as special occasions 🎉. The sleek and modern design complements any table setting, while the sturdy construction ensures long-lasting use. Each piece is dishwasher-safe and microwave-friendly, making cleanup and reheating a breeze 🧼.\n\nWhether you're hosting a dinner party or enjoying a casual meal at home, this versatile set provides everything you need to serve your favorite dishes in style. Enhance your dining experience with a set that combines practicality with a touch of sophistication.",
     "price": 1500,
     "category": "Kitchen",
     "img": "Images/Dinner-set.png"

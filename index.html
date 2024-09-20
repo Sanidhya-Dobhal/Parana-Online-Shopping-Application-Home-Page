@@ -2,8 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
-    <link rel ="icon" href="Screenshot 2023-10-27 at 8.12.10 AM.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Parana</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
@@ -11,18 +10,22 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel ="stylesheet" href ="shopping.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="shopping.css" />
   </head>
   <body>
-    <header id ="header">
+    <header id="header">
       <a href="#">Home</a>
-      <a href="#pro_list" class ="resp_hide">Products</a>
-      <select class = "resp_show">
-        <option name = "Products">Products</option>
-        <option name = "Categories">Categories</option>
+      <a href="#pro_list" class="resp-hide">Products</a>
+      <select class="resp-show">
+        <option name="Products">Products</option>
+        <option name="Categories">Categories</option>
       </select>
       <div style="display: flex; height: 40px">
         <input
@@ -30,8 +33,8 @@
           type="search"
           placeholder="Search"
           aria-label="Search"
-          style = "width:23vw"
-        /> 
+          style="width: 23vw"
+        />
         <button
           class="btn btn-outline-success btn-light search_but"
           type="submit"
@@ -39,105 +42,155 @@
           Go
         </button>
       </div>
-      <a href="#categories-and-prod-list" class ="resp_hide" id = "cat_in_header">Categories</a>
-      <div style = "display:flex; flex-direction:row; row-gap: 10px;">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M17 18C15.89 18 15 18.89 15 20C15 20.5304 15.2107 21.0391 15.5858 21.4142C15.9609 21.7893 16.4696 22 17 22C17.5304 22 18.0391 21.7893 18.4142 21.4142C18.7893 21.0391 19 20.5304 19 20C19 19.4696 18.7893 18.9609 18.4142 18.5858C18.0391 18.2107 17.5304 18 17 18ZM1 2V4H3L6.6 11.59L5.24 14.04C5.09 14.32 5 14.65 5 15C5 15.5304 5.21071 16.0391 5.58579 16.4142C5.96086 16.7893 6.46957 17 7 17H19V15H7.42C7.3537 15 7.29011 14.9737 7.24322 14.9268C7.19634 14.8799 7.17 14.8163 7.17 14.75C7.17 14.7 7.18 14.66 7.2 14.63L8.1 13H15.55C16.3 13 16.96 12.58 17.3 11.97L20.88 5.5C20.95 5.34 21 5.17 21 5C21 4.73478 20.8946 4.48043 20.7071 4.29289C20.5196 4.10536 20.2652 4 20 
-          4H5.21L4.27 2M7 18C5.89 18 5 18.89 5 20C5 20.5304 5.21071 21.0391 5.58579 21.4142C5.96086 21.7893 6.46957 22 7 22C7.53043 22 8.03914 21.7893 8.41421 21.4142C8.78929 21.0391 9 20.5304 9 20C9 19.4696 8.78929 18.9609 8.41421 18.5858C8.03914 18.2107 7.53043 18 7 18Z" fill = "#D9D9D9"/>
-          </svg>   
-      <a id = "cartAnchor">Cart</a>
-    </div>
-    </header>
-    <main id ="main">
-      <div style ="height:60px;">
+      <a href="#categories-and-prod-list" class="resp-hide" id="cat_in_header"
+        >Categories</a
+      >
+      <div id="cart-anchor-div">
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M17 18C15.89 18 15 18.89 15 20C15 20.5304 15.2107 21.0391 15.5858 21.4142C15.9609 21.7893 16.4696 22 17 22C17.5304 22 18.0391 21.7893 18.4142 21.4142C18.7893 21.0391 19 20.5304 19 20C19 19.4696 18.7893 18.9609 18.4142 18.5858C18.0391 18.2107 17.5304 18 17 18ZM1 2V4H3L6.6 11.59L5.24 14.04C5.09 14.32 5 14.65 5 15C5 15.5304 5.21071 16.0391 5.58579 16.4142C5.96086 16.7893 6.46957 17 7 17H19V15H7.42C7.3537 15 7.29011 14.9737 7.24322 14.9268C7.19634 14.8799 7.17 14.8163 7.17 14.75C7.17 14.7 7.18 14.66 7.2 14.63L8.1 13H15.55C16.3 13 16.96 12.58 17.3 11.97L20.88 5.5C20.95 5.34 21 5.17 21 5C21 4.73478 20.8946 4.48043 20.7071 4.29289C20.5196 4.10536 20.2652 4 20 
+          4H5.21L4.27 2M7 18C5.89 18 5 18.89 5 20C5 20.5304 5.21071 21.0391 5.58579 21.4142C5.96086 21.7893 6.46957 22 7 22C7.53043 22 8.03914 21.7893 8.41421 21.4142C8.78929 21.0391 9 20.5304 9 20C9 19.4696 8.78929 18.9609 8.41421 18.5858C8.03914 18.2107 7.53043 18 7 18Z"
+            fill="currentColor"
+          />
+        </svg>
+        <a id="cart-anchor-in-header">Cart</a>
       </div>
+    </header>
+    <main id="main">
       <div id="Featured_product_div">
-        <p class ="Heading_in_page">Hostel Essentials</p>
+        <p class="heading-in-page">Hostel Essentials</p>
         <div>
-        <div id= "The_features">
-        
-        <div class = "Featured-item">
-            <img src = "Images/Headphones.png" alt = "Image error" class = "featured_image">
-            <p class ="Feat_name">Headphones</p>
-            <p class ="Feat_price">₹ 10000</p>
-            <a href = "#all_items_list"><button class ="btn btn-primary Feat_but">Go to item</button></a>
+          <div id="The_features">
+            <div class="Featured-item">
+              <img
+                src="Images/Headphones.png"
+                alt="Image error"
+                class="featured_image"
+              />
+              <p class="Feat_name">Headphones</p>
+              <p class="Feat_price">₹ 10000</p>
+              <a href="#products-list-section"
+                ><button class="btn btn-primary Feat_but">Go to item</button></a
+              >
+            </div>
+            <div class="Featured-item">
+              <img
+                src="Images/Final_coffee.png"
+                alt="Image error"
+                class="featured_image"
+              />
+              <p class="Feat_name">Coffee jar</p>
+              <p class="Feat_price">₹ 400</p>
+              <a href="#products-list-section"
+                ><button class="btn btn-primary Feat_but">Go to item</button></a
+              >
+            </div>
+            <div class="Featured-item">
+              <img
+                src="Images/clock.jpg"
+                alt="Image error"
+                class="featured_image"
+              />
+              <p class="Feat_name">Clock</p>
+              <p class="Feat_price">₹ 2000</p>
+              <a href="#products-list-section"
+                ><button class="btn btn-primary Feat_but">Go to item</button></a
+              >
+            </div>
           </div>
-          <div class = "Featured-item">
-            <img src = "./Images/Final_coffee.png" alt = "Image error" class = "featured_image">
-            <p class ="Feat_name">Coffee jar</p>
-            <p class ="Feat_price">₹ 400</p>
-            <a href = "#all_items_list"><button class ="btn btn-primary Feat_but">Go to item</button></a>
-          </div>
-        <div class = "Featured-item">
-          <img src = "Images/clock.jpg" alt = "Image error" class = "featured_image">
-          <p class ="Feat_name">Clock</p>
-          <p class ="Feat_price">₹ 2000</p>
-          <a href = "#all_items_list"><button class ="btn btn-primary Feat_but">Go to item</button></a>
         </div>
       </div>
-      </div>
-      </div>
 
-      <div id = "categories-and-prod-list">
-        <p class  ="categories_prod_list">Categories</p>
+      <div id="categories-and-prod-list">
+        <p class="categories_prod_list">Categories</p>
         <div id="all_categories_cont">
           <div>
-            <img src = "Images/Categories/tech_category_img.png" alt = "Not found" class ="cat_img" id = "tech_img">
+            <img
+              src="Images/Categories/tech_category_img.png"
+              alt="Not found"
+              class="cat_img"
+              id="tech_img"
+            />
             <p>Electronics</p>
           </div>
           <div>
-            <img src = "Images/Categories/Sports_items_category.png" alt ="Not found" class ="cat_img">
+            <img
+              src="Images/Categories/Sports_items_category.png"
+              alt="Not found"
+              class="cat_img"
+            />
             <p>Sports</p>
           </div>
           <div>
-            <img src = "Images/Categories/Fashion_category.png" alt ="Not found" class ="cat_img">
+            <img
+              src="Images/Categories/Fashion_category.png"
+              alt="Not found"
+              class="cat_img"
+            />
             <p>Fashion</p>
           </div>
           <div>
-            <img src = "Images/Categories/Kitchen_category.png" alt ="Not found" class ="cat_img">
+            <img
+              src="Images/Categories/Kitchen_category.png"
+              alt="Not found"
+              class="cat_img"
+            />
             <p>Kitchen</p>
           </div>
           <div>
-            <img src = "Images/Categories/Decorations_category.png" alt ="Not found" class ="cat_img">
+            <img
+              src="Images/Categories/Decorations_category.png"
+              alt="Not found"
+              class="cat_img"
+            />
             <p>Decoration</p>
           </div>
         </div>
-        <div id ="all_items_list">
-        <p class  ="categories_prod_list">Products List</p>
-        <div style = "overflow-x:scroll;">
-      <div id="pro_list">
-      </div>
-    </div>
+        <div id="products-list-section">
+          <p class="categories_prod_list">Products List</p>
+          <div style="overflow-x: scroll">
+            <div id="pro_list"></div>
+          </div>
+        </div>
       </div>
     </main>
-    <aside id="cart" class ="cart_inv">
-      <div id = "first_div_in_cart">
-        <p style ="font-size:25px; margin:auto;">Cart</p>
-        <button class ="btn btn-success btn-sm" style = "height:40px;" id = "buy_button">Buy</button>
+    <aside id="cart" class="cart_inv">
+      <div id="cart-heading-div">
+        <p style="font-size: 25px; margin: auto">Cart</p>
+        <button
+          class="btn btn-success btn-sm"
+          style="height: 40px"
+          id="buy-button-in-cart"
+        >
+          Buy
+        </button>
       </div>
-      <div id = "total_ele">
+      <div id="total-amount-div">
         <p>Total</p>
         <p>:</p>
-        <p id ="Total_in_numbers"></p>
+        <p id="total-in-numbers"></p>
       </div>
-      <div id="The_real_list">
-
-      </div>
-    </div>
+      <div id="item-list-in-cart"></div>
     </aside>
-    <div id= "overlay"></div>
+    <div id="overlay"></div>
     <footer>
-      <a href="#main"><div id ="back_to_top_div">Back to top</div></a>
-      <div id ="footer_info">
-      <p>&copy Sanidhya Dobhal</p>
-      <div> 
-        <p>Contact:</p>
-      <ul style="padding-left:0px;">
-      <li>Email: sanidhyadobhal2002@gmail.com</li>
-      <li>Phone number: 9234567891</li>  
-    </ul>
-    </div>
-    </div>
+      <a href="#main"><div id="back_to_top_div">Back to top</div></a>
+      <div id="footer_info">
+        <p>&copy Sanidhya Dobhal</p>
+        <div>
+          <p>Contact:</p>
+          <ul style="padding-left: 0px">
+            <li>Email: sanidhyadobhal2002@gmail.com</li>
+            <li>Phone number: 9234567891</li>
+          </ul>
+        </div>
+      </div>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script
@@ -145,7 +198,6 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
-    <script src = "shopping.js">
-    </script>
+    <script src="shopping.js"></script>
   </body>
 </html>

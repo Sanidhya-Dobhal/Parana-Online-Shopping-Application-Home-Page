@@ -1,0 +1,100 @@
+header {
+  background-color: rgb(15, 20, 26);
+  position: fixed;
+  width: 100vw;
+  height: 60px;
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1vw;
+  font-family: "Poppins";
+}
+header a {
+  color: white;
+  text-decoration: none;
+  transition-duration: 0.3s;
+}
+#cart-anchor-in-header {
+  color: white;
+  transition-property: color;
+  transition-duration: 0.3s;
+}
+#cart-anchor-in-header::before {
+  content: "";
+  width: 0px;
+  position: absolute;
+  background-color: orange;
+  transition-duration: 0.3s;
+  top: 40px;
+  height: 2px;
+}
+#cart-anchor-in-header:hover {
+  color: orange;
+  cursor: pointer;
+}
+#cart-anchor-in-header:hover::before {
+  width: 35px;
+}
+header a:hover {
+  color: rgb(255, 128, 0);
+}
+header a::before {
+  content: "";
+  width: 0px;
+  position: absolute;
+  background-color: orange;
+  transition-duration: 0.3s;
+  top: 40px;
+  height: 2px;
+}
+header a:nth-child(1):hover::before {
+  width: 47px;
+}
+header a:nth-child(2):hover::before {
+  width: 70px;
+}
+#cat_in_header:hover::before {
+  width: 87px;
+}
+.resp-hide {
+  display: block;
+}
+.me-2 {
+  margin-right: 0px !important;
+}
+.resp-show {
+  display: none;
+  background-color: black;
+  color: white;
+}
+#cart-anchor-div {
+  display: flex;
+  flex-direction: row;
+  row-gap: 10px;
+  transition-property: color;
+  color: white;
+  transition-duration: 0.3s;
+}
+#cart-anchor-div:hover {
+  color: orange;
+}
+#header2 {
+  position: static;
+  display: block;
+  color: white;
+  min-height: 60px;
+  height: auto;
+}
+#individual-product-header-div {
+  display: flex;
+  gap: 16px;
+}
+@media screen and (max-width: 600px) {
+  .resp-hide {
+    display: none;
+  }
+  .resp-show {
+    display: block;
+  }
+}
