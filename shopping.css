@@ -2,75 +2,12 @@
   margin: 0px;
   overflow-x: hidden;
 }
-header {
-  background-color: rgb(15, 20, 26);
-  position: fixed;
-  width: 100vw;
-  height: 60px;
-  z-index: 3;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100vw;
-  height: 60px;
-  padding: 1vw;
-  font-family: "Poppins";
-}
-.me-2 {
-  margin-right: 0px !important;
-}
-header a,
 footer a {
   color: white;
   text-decoration: none;
   transition-duration: 0.3s;
 }
-#cartAnchor {
-  color: white;
-  transition-property: color;
-  transition-duration: 0.3s;
-}
-#cartAnchor::before {
-  content: "";
-  width: 0px;
-  position: absolute;
-  background-color: orange;
-  transition-duration: 0.3s;
-  top: 40px;
-  height: 2px;
-}
-#cartAnchor:hover {
-  color: orange;
-  cursor: pointer;
-}
-#cartAnchor:hover::before {
-  width: 32px;
-}
-header a:hover {
-  color: rgb(255, 128, 0);
-}
-header a::before {
-  content: "";
-  width: 0px;
-  position: absolute;
-  background-color: orange;
-  transition-duration: 0.3s;
-  top: 40px;
-  height: 2px;
-}
-header a:nth-child(1):hover::before {
-  width: 47px;
-}
-header a:nth-child(2):hover::before {
-  width: 68px;
-}
-#cat_in_header:hover::before {
-  width: 80px;
-}
-header a:nth-child(5):hover::before {
-  width: 34px;
-}
-.Heading_in_page {
+.heading-in-page {
   background-color: rgb(15, 20, 26);
   color: rgb(219, 241, 22);
   width: 250px;
@@ -80,6 +17,7 @@ header a:nth-child(5):hover::before {
   margin-top: 15px;
 }
 #Featured_product_div {
+  margin-top: 60px;
   background-image: linear-gradient(
     to right,
     rgb(0, 255, 251),
@@ -87,9 +25,16 @@ header a:nth-child(5):hover::before {
   );
   padding-bottom: 30px;
 }
+.item-buttons-in-product-list {
+  width: 164px;
+  margin-bottom: 8px;
+  margin-left: auto;
+  margin-right: auto;
+}
 .Feat_but {
   display: block;
-  margin-left: 20px;
+  margin-left: 25px;
+  margin-bottom: 25px;
 }
 #The_features {
   width: 80vw;
@@ -104,7 +49,7 @@ header a:nth-child(5):hover::before {
   width: 300px;
   background-color: #535353;
   color: white;
-  border: 4px solid white;
+  border: 2px solid #7c7c7c;
 }
 .featured_image {
   display: block;
@@ -115,11 +60,12 @@ header a:nth-child(5):hover::before {
 .Feat_name {
   margin: 10px;
   font-size: 17px;
+  margin-left: 25px;
 }
 .Feat_price {
   font-size: 20px;
   font-weight: 600;
-  margin-left: 7px;
+  margin-left: 25px;
 }
 #categories-and-prod-list {
   background-color: #404040;
@@ -158,7 +104,7 @@ header a:nth-child(5):hover::before {
   width: 11.1vw;
 }
 #all_categories_cont div {
-  border: 5px outset;
+  border: 2px solid #7c7c7c;
   background-color: #5c5c5c;
   display: flex;
   margin: auto;
@@ -200,7 +146,7 @@ header a:nth-child(5):hover::before {
   display: block;
 }
 #pro_list div {
-  border: 5px outset;
+  border: 2px solid #7c7c7c;
 }
 footer {
   background-color: rgb(15, 20, 25);
@@ -246,7 +192,7 @@ footer div:nth-child(1):hover {
   transition-duration: 0.2s;
   z-index: 3;
 }
-#first_div_in_cart {
+#cart-heading-div {
   width: 12vw;
   display: flex;
   justify-content: space-between;
@@ -259,7 +205,7 @@ main {
 .main_size_mod {
   width: 88.1vw;
 }
-#total_ele {
+#total-amount-div {
   display: flex;
   justify-content: space-around;
   width: 100%;
@@ -280,14 +226,6 @@ main {
   top: 0px;
   left: 0px;
   display: none;
-}
-.resp_show {
-  display: none;
-  background-color: black;
-  color: white;
-}
-.resp_hide {
-  display: block;
 }
 .all_cards {
   border-radius: 11px;
@@ -320,7 +258,7 @@ main {
   .cart_vis {
     left: 70vw;
   }
-  #first_div_in_cart {
+  #cart-heading-div {
     width: 30vw;
   }
   .cart_item_cls {
@@ -329,16 +267,9 @@ main {
   .cart_item_cls img {
     width: 29.3vw;
   }
-  .resp_show {
-    display: block;
-  }
-  .resp_hide {
-    display: none;
-  }
-  .search_but {
+  /* .search_but {
     width: 35px;
-    display: block !important;
-
     text-align: center;
-  }
+    padding: 0;
+  } */
 }

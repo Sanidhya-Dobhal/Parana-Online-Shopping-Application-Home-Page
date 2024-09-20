@@ -4,4 +4,4 @@ cart: array : An array of objects that has 2 properties: (item)1 JSON object and
 arr_obj :
 addToCartButtonGenerator():
 totalCostCalculatonAndLocalStorage() - calculates and returns the total  
-#The_real_list: The div that is continuously getting re-rendered
+#item-list-in-cart: The div that is continuously getting re-rendered
