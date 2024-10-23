@@ -9,6 +9,7 @@ header {
   align-items: center;
   padding: 1vw;
   font-family: "Poppins";
+  overflow-y: hidden;
 }
 header a {
   color: white;
