@@ -10,6 +10,9 @@ body {
   width: 35vw;
   margin-top: auto;
   margin-bottom: auto;
+  max-width: 450px;
+  display: block;
+  margin: auto;
 }
 #product-details {
   margin-left: 24px;
@@ -30,4 +33,13 @@ body {
   margin-top: 8px;
   color: white;
   background-color: #303030;
+}
+@media screen and (max-width: 620px) {
+  #current-item-div {
+    flex-direction: column;
+  }
+  #product-image {
+    width: 100%;
+    height: auto;
+  }
 }

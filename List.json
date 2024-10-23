@@ -1,6 +1,6 @@
 {
   "Product1": {
-    "name": "Headphones",
+    "name": "Headphone",
     "descriptiveName": "Bass boost bluetooth headphones with noise cancellation",
     "price": 10000,
     "category": "Electronics",
@@ -32,7 +32,7 @@
     "img": "Images/Indoor_plant.png"
   },
   "Product5": {
-    "name": "T-Shirt",
+    "name": "T-shirt",
     "descriptiveName": "White casual cotton T-shirt| Half sleeve",
     "description": "Introducing Rainbow's White Casual Cotton T-Shirt 👕, a wardrobe essential designed for comfort and effortless style. Made from high-quality, breathable cotton, this t-shirt is perfect for everyday wear, whether you're lounging at home or heading out for a casual outing.\n\nWith its classic half-sleeve design, this t-shirt offers a relaxed fit that pairs easily with jeans, shorts, or your favorite joggers. The soft cotton fabric ensures all-day comfort, keeping you cool and comfortable even on warmer days ☀️.\n\nIts timeless white color makes it a versatile piece that can be dressed up or down, while the durable stitching ensures it holds up wash after wash 🧺. Whether you're layering it under a jacket or wearing it solo, this cotton t-shirt is a go-to option for effortless, casual style. Perfect for men and women who appreciate comfort without compromising on style.",
     "price": 370,

@@ -1,3 +1,6 @@
+:root {
+  --backgroundGray: #323232;
+}
 * {
   margin: 0px;
   overflow-x: hidden;
@@ -16,8 +19,7 @@ footer a {
   font-size: 25px;
   margin-top: 15px;
 }
-#Featured_product_div {
-  margin-top: 60px;
+#featured-products-div {
   background-image: linear-gradient(
     to right,
     rgb(0, 255, 251),
@@ -31,11 +33,6 @@ footer a {
   margin-left: auto;
   margin-right: auto;
 }
-.Feat_but {
-  display: block;
-  margin-left: 25px;
-  margin-bottom: 25px;
-}
 #The_features {
   width: 80vw;
   margin: auto;
@@ -44,20 +41,22 @@ footer a {
   justify-content: space-around;
   transition-property: width;
   transition-duration: 0.2s;
+  min-height: 330px;
 }
-.Featured-item {
+.featured-item {
   width: 300px;
   background-color: #535353;
   color: white;
   border: 2px solid #7c7c7c;
 }
-.featured_image {
+.featured-images {
   display: block;
   margin: 8px auto;
   width: 250px;
   height: 163px;
+  visibility: hidden;
 }
-.Feat_name {
+.feature-item-name {
   margin: 10px;
   font-size: 17px;
   margin-left: 25px;
@@ -67,8 +66,14 @@ footer a {
   font-weight: 600;
   margin-left: 25px;
 }
+.feat-button {
+  display: block;
+  margin-left: 25px;
+  margin-bottom: 25px;
+  visibility: hidden;
+}
 #categories-and-prod-list {
-  background-color: #404040;
+  background-color: var(--backgroundGray);
   color: white;
   padding-bottom: 50px;
 }
@@ -105,7 +110,7 @@ footer a {
 }
 #all_categories_cont div {
   border: 2px solid #7c7c7c;
-  background-color: #5c5c5c;
+  background-color: #535353;
   display: flex;
   margin: auto;
   margin-bottom: 20px;
@@ -145,7 +150,7 @@ footer a {
   height: 200px;
   display: block;
 }
-#pro_list div {
+#pro_list > div {
   border: 2px solid #7c7c7c;
 }
 footer {
@@ -201,6 +206,7 @@ main {
   width: 100vw;
   transition-property: width;
   transition-duration: 0.2s;
+  margin-top: 60px;
 }
 .main_size_mod {
   width: 88.1vw;
@@ -229,9 +235,36 @@ main {
 }
 .all_cards {
   border-radius: 11px;
+  min-width: 200px;
+  margin: 15px;
+}
+.card-in-search-result {
+  border-radius: 11px;
+  min-width: 200px;
+  margin: 15px;
+  width: 450px;
+  border: 2px solid #7c7c7c;
+}
+.card-in-search-result img {
+  width: 248px;
+  height: 248px;
 }
 .all_cards > p {
   padding: 0 10px;
+}
+.card-in-search-result {
+  display: flex;
+  gap: 20px;
+}
+#search-result-div {
+  background-color: var(--backgroundGray);
+  color: white;
+}
+.product-details-div {
+  min-width: 130px;
+}
+.product-category {
+  margin-bottom: 40px;
 }
 @media screen and (max-width: 1390px) {
   #all_categories_cont div {
@@ -267,9 +300,32 @@ main {
   .cart_item_cls img {
     width: 29.3vw;
   }
-  /* .search_but {
-    width: 35px;
-    text-align: center;
-    padding: 0;
-  } */
+}
+@media screen and (max-width: 475px) {
+  #search-result-div .card-in-search-result {
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+  }
+  #search-result-div .product-image-div {
+    width: 55%;
+    display: flex;
+    align-items: center;
+  }
+  #search-result-div .pro_list_item_image {
+    width: 100%;
+    height: auto;
+  }
+  #search-result-div .item-buttons-in-product-list {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 420px) {
+  #search-result-div span {
+    display: none;
+  }
+  #search-result-div .product-category {
+    margin-bottom: 20px;
+    color: #a0a0a0;
+  }
 }

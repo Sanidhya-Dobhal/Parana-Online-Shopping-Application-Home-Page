@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="shopping.css" />
   </head>
   <body>
-    <header id="header">
+    <header>
       <a href="#">Home</a>
       <a href="#pro_list" class="resp-hide">Products</a>
       <select class="resp-show">
@@ -29,6 +29,7 @@
       </select>
       <div style="display: flex; height: 40px">
         <input
+          id="search-bar"
           class="form-control me-2"
           type="search"
           placeholder="Search"
@@ -36,7 +37,7 @@
           style="width: 23vw"
         />
         <button
-          class="btn btn-outline-success btn-light search_but"
+          class="btn btn-outline-success btn-light search-button"
           type="submit"
         >
           Go
@@ -63,44 +64,50 @@
       </div>
     </header>
     <main id="main">
-      <div id="Featured_product_div">
-        <p class="heading-in-page">Hostel Essentials</p>
+      <div id="featured-products-div">
+        <p class="heading-in-page">Featured Products</p>
         <div>
           <div id="The_features">
-            <div class="Featured-item">
+            <div class="featured-item">
               <img
                 src="Images/Headphones.png"
                 alt="Image error"
-                class="featured_image"
+                class="featured-images"
               />
-              <p class="Feat_name">Headphones</p>
-              <p class="Feat_price">₹ 10000</p>
+              <p class="feature-item-name"></p>
+              <p class="Feat_price"></p>
               <a href="#products-list-section"
-                ><button class="btn btn-primary Feat_but">Go to item</button></a
+                ><button class="btn btn-primary feat-button">
+                  Go to item
+                </button></a
               >
             </div>
-            <div class="Featured-item">
+            <div class="featured-item">
               <img
                 src="Images/Final_coffee.png"
                 alt="Image error"
-                class="featured_image"
+                class="featured-images"
               />
-              <p class="Feat_name">Coffee jar</p>
-              <p class="Feat_price">₹ 400</p>
+              <p class="feature-item-name"></p>
+              <p class="Feat_price"></p>
               <a href="#products-list-section"
-                ><button class="btn btn-primary Feat_but">Go to item</button></a
+                ><button class="btn btn-primary feat-button">
+                  Go to item
+                </button></a
               >
             </div>
-            <div class="Featured-item">
+            <div class="featured-item">
               <img
                 src="Images/clock.jpg"
                 alt="Image error"
-                class="featured_image"
+                class="featured-images"
               />
-              <p class="Feat_name">Clock</p>
-              <p class="Feat_price">₹ 2000</p>
+              <p class="feature-item-name"></p>
+              <p class="Feat_price"></p>
               <a href="#products-list-section"
-                ><button class="btn btn-primary Feat_but">Go to item</button></a
+                ><button class="btn btn-primary feat-button">
+                  Go to item
+                </button></a
               >
             </div>
           </div>
@@ -199,5 +206,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="shopping.js"></script>
+    <script src="itemRetrival.js"></script>
   </body>
 </html>
