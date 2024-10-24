@@ -31,7 +31,9 @@ xhr.onload = function () {
     if (cart[i]?.quantity > 0) {
       qtyBoxInProductList = generateInputBoxInItemList(cart[i].quantity);
       let itemCard = $(".all_cards")[i];
-      itemCard.appendChild(qtyBoxInProductList);
+      itemCard
+        .getElementsByClassName("product-details-div")[0]
+        .appendChild(qtyBoxInProductList);
       itemCard.classList.remove("buy_btn_present");
       itemCard.classList.add("buy_btn_absent");
       itemCard.getElementsByTagName("button")[1].remove();
@@ -94,7 +96,6 @@ function firstItemHandler(e) {
   let all_cards = document.getElementsByClassName("all_cards");
   let i = 0;
   let addToCartButton = e.target;
-  console.log("e.target is", addToCartButton);
   console.log("e.target parent", $(addToCartButton).parent());
   for (i in all_cards)
     if (
@@ -103,7 +104,6 @@ function firstItemHandler(e) {
     )
       break;
   addToCartButton.remove();
-  console.log("The value of i is", i);
   let new_qty_box = generateInputBoxInItemList(1);
   let item_box = document.getElementsByClassName("all_cards")[i];
   let itemBoxDetails = item_box.getElementsByClassName(
@@ -150,7 +150,10 @@ function valueIs0(event) {
         all_cards[i]
           .getElementsByClassName("product-details-div")[0]
           .appendChild(but);
-        all_cards[i].getElementsByTagName("div")[1].remove();
+        all_cards[i]
+          .getElementsByTagName("div")[1]
+          .getElementsByTagName("div")[0]
+          .remove();
         cart[i].quantity = 0;
       }
     }
@@ -437,7 +440,6 @@ function responsive() {
         $("#cart")[0].classList[0] === "cart_inv"
       ) {
         //This implies the cart is going to be invisible
-        console.log("heaven");
         $("#all_categories_cont")[0].style.display = "grid";
         $("#tech_img")[0].setAttribute(
           "src",
