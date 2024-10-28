@@ -245,7 +245,10 @@ function cartItemsRenderer() {
         cart[i].quantity = e.target.value;
         if (e.target.value === "0" || e.target.value === "") {
           $(e.target).parent()[0].remove();
-          all_cards[i].getElementsByTagName("div")[1].remove();
+          all_cards[i]
+            .getElementsByTagName("div")[1]
+            .getElementsByTagName("div")[0]
+            .remove();
           but = addToCartButtonGenerator();
           all_cards[i]
             .getElementsByClassName("product-details-div")[0]
