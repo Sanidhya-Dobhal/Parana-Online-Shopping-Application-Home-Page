@@ -34,6 +34,9 @@ body {
   color: white;
   background-color: #303030;
 }
+#product-description {
+  text-align: justify;
+}
 @media screen and (max-width: 620px) {
   #current-item-div {
     flex-direction: column;

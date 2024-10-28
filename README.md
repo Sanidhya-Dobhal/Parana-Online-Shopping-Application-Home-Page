@@ -15,4 +15,9 @@
 <img src = "./Images/Logos/jQuery.png" style = "height:20px; "/>and AJAX in javaScript</p>
 </div>
 <p><b>2) <u>Element width aware resposiveness:</u></b> This webapp handles responsiveness according to the width of main content based on whether the shopping cart is visible or not and goes beyond the capabilities of simple CSS media queries</p>
-<p><b>3) <u>Persistant cart items storage:</u></b> items added to the cart are stored in <i>localStorage</i> to persist across multiple sessions
+<p><b>3) <u>Persistant cart items storage:</u></b> items added to the cart are stored in <i>localStorage</i> to persist across multiple sessions</p>
+<p>4) <b><u>Searching:</u></b> Users can search for items using the search bar on the main page. Results matching the user's query will be displayed.
+
+</p>
+<p>5) <b><u>Product detail page:</u></b> A detailed product description opens on a separate page, where product is identified based on the search parameters from the previous location.
+</p>
