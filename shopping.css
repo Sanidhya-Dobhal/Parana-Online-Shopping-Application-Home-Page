@@ -13,10 +13,9 @@ footer a {
 .heading-in-page {
   background-color: rgb(15, 20, 26);
   color: rgb(219, 241, 22);
-  width: 250px;
-  padding-bottom: 15px;
-  padding-top: 15px;
-  font-size: 25px;
+  width: 200px;
+  padding: 15px;
+  font-size: 20px;
   margin-top: 15px;
 }
 #featured-products-div {
@@ -25,7 +24,7 @@ footer a {
     rgb(0, 255, 251),
     rgb(255, 196, 0)
   );
-  padding-bottom: 30px;
+  padding-bottom: 32px;
 }
 .item-buttons-in-product-list {
   width: 164px;
@@ -75,7 +74,7 @@ footer a {
 #categories-and-prod-list {
   background-color: var(--backgroundGray);
   color: white;
-  padding-bottom: 50px;
+  padding-bottom: 48px;
 }
 .categories_prod_list {
   background-color: rgb(15, 20, 26);
@@ -157,7 +156,7 @@ footer {
   background-color: rgb(15, 20, 25);
   color: white;
 }
-footer div:nth-child(1) {
+#back-to-top-div {
   padding-top: 10px;
   padding-bottom: 10px;
   text-align: center;
@@ -165,12 +164,12 @@ footer div:nth-child(1) {
   font-size: 20px;
   background-color: rgb(30, 30, 30);
 }
-footer div:nth-child(1):hover {
+#back-to-top-div:hover {
   background-color: rgb(50, 50, 50);
 }
-#footer_info {
+#footer-info {
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   width: 80vw;
   margin: auto;
   margin-top: 20px;
@@ -233,7 +232,7 @@ main {
   left: 0px;
   display: none;
 }
-.all_cards {
+.all-cards {
   border-radius: 11px;
   min-width: 200px;
   margin: 15px;
@@ -241,15 +240,15 @@ main {
 .card-in-search-result {
   border-radius: 11px;
   min-width: 200px;
-  margin: 15px;
+  margin: 24px;
   width: 450px;
   border: 2px solid #7c7c7c;
 }
 .card-in-search-result img {
-  width: 248px;
-  height: 248px;
+  width: 254px;
+  height: 254px;
 }
-.all_cards > p {
+.all-cards > p {
   padding: 0 10px;
 }
 .card-in-search-result {
@@ -259,6 +258,18 @@ main {
 #search-result-div {
   background-color: var(--backgroundGray);
   color: white;
+  padding-bottom: 8px;
+}
+#search-result-none-div {
+  background-color: var(--backgroundGray);
+  color: white;
+  padding: 8px;
+}
+#search-result-none-div lottie-player {
+  margin: auto;
+}
+#search-result-none-div p {
+  text-align: center;
 }
 .product-details-div {
   min-width: 130px;
@@ -266,6 +277,12 @@ main {
 .product-category {
   margin-bottom: 40px;
 }
+#social-links-div {
+  width: 140px;
+  display: flex;
+  justify-content: space-between;
+}
+
 @media screen and (max-width: 1390px) {
   #all_categories_cont div {
     width: 23.3vw;
@@ -299,6 +316,18 @@ main {
   }
   .cart_item_cls img {
     width: 29.3vw;
+  }
+  #footer-info {
+    display: block;
+  }
+  #social-links-div {
+    margin-bottom: 16px;
+  }
+  #footer-info p {
+    margin-bottom: 8px;
+  }
+  #copyright-line {
+    display: none;
   }
 }
 @media screen and (max-width: 475px) {
