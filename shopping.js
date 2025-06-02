@@ -23,14 +23,14 @@ xhr.onload = function () {
       cart.push(arr_obj);
     }
     const card = cardGenerator(i);
-    $(card).addClass("all_cards");
+    $(card).addClass("all-cards");
     $("#pro_list")[0].appendChild(card);
   }
   for (let i = 0; i < cart.length; i++) {
     let qtyBoxInProductList;
     if (cart[i]?.quantity > 0) {
       qtyBoxInProductList = generateInputBoxInItemList(cart[i].quantity);
-      let itemCard = $(".all_cards")[i];
+      let itemCard = $(".all-cards")[i];
       itemCard
         .getElementsByClassName("product-details-div")[0]
         .appendChild(qtyBoxInProductList);
@@ -93,19 +93,19 @@ function cardGenerator(i) {
   return card;
 }
 function firstItemHandler(e) {
-  let all_cards = document.getElementsByClassName("all_cards");
+  let all_cards = document.getElementsByClassName("all-cards");
   let i = 0;
   let addToCartButton = e.target;
   console.log("e.target parent", $(addToCartButton).parent());
   for (i in all_cards)
     if (
-      document.getElementsByClassName("all_cards")[i] ===
+      document.getElementsByClassName("all-cards")[i] ===
       $(addToCartButton).parent().parent()[0]
     )
       break;
   addToCartButton.remove();
   let new_qty_box = generateInputBoxInItemList(1);
-  let item_box = document.getElementsByClassName("all_cards")[i];
+  let item_box = document.getElementsByClassName("all-cards")[i];
   let itemBoxDetails = item_box.getElementsByClassName(
     "product-details-div"
   )[0];
@@ -126,8 +126,8 @@ function generateInputBoxInItemList(number) {
   inp.setAttribute("type", "number");
   inp.setAttribute("min", 0);
   inp.setAttribute("max", 999);
-  inp.style.width = "140px";
-  inp.addEventListener("input", valueIs0);
+  inp.style.width = "136px";
+  inp.addEventListener("change", valueIs0);
   inp.addEventListener("input", cartUpdater);
   inp.setAttribute("value", number);
   new_qty_box.appendChild(pa);
@@ -141,10 +141,9 @@ function generateInputBoxInItemList(number) {
 }
 function valueIs0(event) {
   if (event.target.value === "0" || event.target.value === "") {
-    let all_cards = document.getElementsByClassName("all_cards");
+    let all_cards = $(".all-cards");
     for (i = 0; i < all_cards.length; i++) {
       if (all_cards[i].getElementsByTagName("input")[0] === event.target) {
-        console.log("new", all_cards[i].getElementsByTagName("input")[0]);
         all_cards[i].getElementsByTagName("input")[0].remove();
         const but = addToCartButtonGenerator();
         all_cards[i]
@@ -172,7 +171,7 @@ function addToCartButtonGenerator() {
   return but;
 }
 function cartUpdater(event) {
-  let all_cards = $(".all_cards");
+  let all_cards = $(".all-cards");
   if (event.target.value > 999) {
     event.target.value = Math.floor(event.target.value / 10);
   }
@@ -217,7 +216,6 @@ function cartItemsRenderer() {
             let j = 0;
             for (j = 0; j < e.target.value.length; j++) {
               if (e.target.value.charAt(j) === e.data) {
-                console.log("caught");
                 break;
               }
             }
@@ -236,7 +234,7 @@ function cartItemsRenderer() {
         const cart_itm_par = $(e.target).parent();
         const prod_name =
           cart_itm_par[0].getElementsByTagName("p")[0].innerText;
-        const all_cards = document.getElementsByClassName("all_cards");
+        const all_cards = document.getElementsByClassName("all-cards");
         let i = 0;
         for (i in cart) {
           if (cart[i].item.name === prod_name) break;
@@ -517,6 +515,13 @@ function featuredItemsRandomizer(allItemsObjectsArr) {
     currFeaturedDivChildren[3].getElementsByTagName(
       "button"
     )[0].style.visibility = "visible";
+  }
+}
+function selectChange(event) {
+  if (event.target.value === "Categories") {
+    $("#categories-and-prod-list")[0].scrollIntoView();
+  } else {
+    $("#products-list-section")[0].scrollIntoView();
   }
 }
 window.addEventListener("resize", responsive);
