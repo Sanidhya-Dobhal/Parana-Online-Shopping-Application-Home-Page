@@ -55,6 +55,7 @@ function itemSearch() {
     $("#search-result-none-div")[0].prepend(noProductsPara[0]);
     $("#search-result-none-div")[0].prepend(noResultsLottie[0]);
   }
+  window.scrollTo(0, 0);
 }
 $(".search-button").click(itemSearch);
 $("#search-bar").keypress((e) => {
