@@ -54,7 +54,7 @@
 
 - This level of detail has been maintained throughout the application.
 
-## Live Demo @
+## Live Demo 
 
 https://sanidhya-dobhal.github.io/Parana-Online-Shopping-Application-Home-Page/
 
@@ -78,9 +78,9 @@ https://sanidhya-dobhal.github.io/Parana-Online-Shopping-Application-Home-Page/
 
 ### 📱 Mobile View
 
-<img src ="Images/ScreenShots for Readme/OnLoad mobile.jpeg" style = "height: 450px"> &nbsp; <img src = "/Users/spdobhal/Desktop/parana/Images/ScreenShots for Readme/Top of webapp with no results in phone.jpeg" style = "height: 450px">
+<img src ="Images/ScreenShots for Readme/OnLoad mobile.jpeg" style = "height: 450px"> &nbsp; <img src = "Images/ScreenShots for Readme/Top of webapp with no results in phone.jpeg" style = "height: 450px">
 <img src ="Images/ScreenShots for Readme/products added in cart in phone.jpeg" style = "height: 450px">
-<img src ="/Users/spdobhal/Desktop/parana/Images/ScreenShots for Readme/individual items page mobile.jpeg" style = "height: 450px">
+<img src ="Images/ScreenShots for Readme/individual items page mobile.jpeg" style = "height: 450px">
 
 ## Tech Stack
 
