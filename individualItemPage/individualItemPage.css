@@ -30,7 +30,6 @@ body {
 #current-item-div {
   display: flex;
   flex-direction: row;
-  margin-top: 8px;
   color: white;
   background-color: #303030;
 }
@@ -44,5 +43,6 @@ body {
   #product-image {
     width: 100%;
     height: auto;
+    margin-bottom: 16px;
   }
 }
