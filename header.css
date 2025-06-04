@@ -86,6 +86,7 @@ header a:nth-child(2):hover::before {
   color: white;
   min-height: 60px;
   height: auto;
+  width: 100%;
 }
 #individual-product-header-div {
   display: flex;
