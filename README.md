@@ -93,7 +93,7 @@ https://sanidhya-dobhal.github.io/Parana-Online-Shopping-Application-Home-Page/
 
 ## Contact
 
-If you catch any bug please raise it as a new issue in the [issues' tab](https://github.com/Sanidhya-Dobhal/Parana-Online-Shopping-Application-Home-Page/issues)
+If you catch any  🐞 bugs please raise them as a new issues in the [issues' tab](https://github.com/Sanidhya-Dobhal/Parana-Online-Shopping-Application-Home-Page/issues)
 
 or you can email me at sanidhya.dobhal@gmail.com
 .
